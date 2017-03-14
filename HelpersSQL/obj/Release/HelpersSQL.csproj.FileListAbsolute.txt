@@ -1,0 +1,5 @@
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\HelpersSQL\HelpersSQL\bin\Release\HelpersSQL.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\HelpersSQL\HelpersSQL\bin\Release\HelpersSQL.pdb
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\HelpersSQL\HelpersSQL\obj\Release\HelpersSQL.csprojResolveAssemblyReference.cache
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\HelpersSQL\HelpersSQL\obj\Release\HelpersSQL.dll
+C:\Users\kenda\Documents\Visual Studio 2015\Projects\HelpersSQL\HelpersSQL\obj\Release\HelpersSQL.pdb
