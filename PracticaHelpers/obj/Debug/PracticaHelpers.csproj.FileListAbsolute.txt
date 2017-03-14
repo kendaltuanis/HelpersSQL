@@ -1,2 +1,0 @@
-C:\Users\Mario\Desktop\progra\practicahelpers\PracticaHelpers\bin\Debug\PracticaHelpers.exe.config
-C:\Users\Mario\Desktop\progra\practicahelpers\PracticaHelpers\obj\Debug\PracticaHelpers.csprojResolveAssemblyReference.cache
