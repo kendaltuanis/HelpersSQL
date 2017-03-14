@@ -8,6 +8,7 @@
 | 4: | git pull |
 
 # Realizar commits
+| Provider  | connection string example |
 | ------------- | ------------- |
 | 1: | git status | Ve todos los cambios que fueron hechos en su proyecto |
 | 2: | git add "nombreCambioArchivo" | Se agrega el cambio que se haya realizado |
