@@ -1,14 +1,14 @@
 # Librería Helpers para C#
 
 # Actualizar con el repositorio original 
-| ------------- | ------------- |
+| Pasos | Comandos | 
 | 1: | git remote add upstream https://github.com/kendaltuanis/practicahelpers |
 | 2: | git fetch upstream |
 | 3: | git merge upstream/master |
 | 4: | git pull |
 
 # Realizar commits
-| Provider  | connection string example |
+| Pasos  | Comandos | Explicación | 
 | ------------- | ------------- |
 | 1: | git status | Ve todos los cambios que fueron hechos en su proyecto |
 | 2: | git add "nombreCambioArchivo" | Se agrega el cambio que se haya realizado |
