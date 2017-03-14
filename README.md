@@ -10,7 +10,7 @@
 
 # Realizar commits
 | Pasos  | Comandos | Explicación | 
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | 1: | git status | Ve todos los cambios que fueron hechos en su proyecto  |
 | 2: | git add "nombreCambioArchivo" | Se agrega el cambio que se haya realizado  |
 | 3: | git commit -m "nombredelcommit" | Se agrega el commit con sus respectivo nombre  |
