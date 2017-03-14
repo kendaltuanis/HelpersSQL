@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DBAccess;
 using PracticaHelpers.Utils;
 
 namespace PracticaHelpers
 {
-    class Program
+  static class Program
     {
+        public static DBAccess.DBAccess datos;
+        /// <summary>
+        /// Punto de entrada principal para la aplicación.
+        /// </summary>
+        [STAThread]
         static void Main(string[] args)
         {
-            SqlHelper sql = new SqlHelper();
-            String[] campos = new String[] { "campo1","campo2","campo3"};
-            sql.InsertSql("profesor",campos);
+
 
         }
     }
