@@ -11,15 +11,8 @@ namespace PracticaHelpers.Utils
         {
             public string InsertSql(string table, string[] fields)
             {
-            StringBuilder sql = new StringBuilder();
-            sql.Append("INSERT INTO ").Append(table).Append(" VALUES(");
-            foreach (string field in fields)
-            {
-                sql.Append(field).Append(","); 
-            }
-
-
-                return "";
+                return string.Format("INSERT INTO {0} ({1}) VALUES ({2})", table, string.Join(",", fields), string.Join(",", fields.Select(s => "@" + s)));
+            
             }
 
             public string UpdateSql(string table, string[] fields)
