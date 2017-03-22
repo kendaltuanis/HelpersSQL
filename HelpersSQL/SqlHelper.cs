@@ -37,7 +37,8 @@ namespace HelpersSQL
 
         public string SelectSql(string[] fields)
         {
-            return string.Format("SELECT {0} FROM {1}" + ((fields != null) ? " WHERE {2}" : ";"), JoinFields(fields), table, JoinFieldsWithEquals(fields));
+            //return string.Format("SELECT {0} FROM {1}" + ((fields != null) ? " WHERE {2}" : ";"), JoinFields(fields), table, JoinFieldsWithEquals(fields));
+            return string.Format("SELECT {0} FROM {1}", JoinFields(fields), table);
         }
 
         /*
