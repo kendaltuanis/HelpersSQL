@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using HelpersSQL.Enums;
 
 namespace HelpersSQL
 {
@@ -8,15 +9,20 @@ namespace HelpersSQL
         private string table;
         private const string SEPARATOR = ",";
         private const bool WHERECONDITION = true;  // TRUE es 'and' y FALSE es 'or'
+        private const DBMotor DBDEFAULT = DBMotor.None;
+
 
         public SqlHelper(String table)
         {
             this.table = table;
         }
 
-        public string InsertSql(string[] fields)
+        public string InsertSql(string[] fields, DBMotor db = DBDEFAULT, string[] fieldsReturn = null)
         {
-            return string.Format("INSERT INTO {0} ({1}) VALUES ({2})", table, JoinFields(fields), JoinFieldWithAt(fields));
+            String post = "", server = "";
+            ReturnField(db, fieldsReturn,ref post,ref server);
+
+            return string.Format("INSERT INTO {0} ({1}) {2} VALUES ({3}) {4}", table, JoinFields(fields),server, JoinFieldWithAt(fields), post);
         }
 
         public string UpdateSql(string[] fields, string[] where, bool andCondition = WHERECONDITION)
@@ -73,6 +79,27 @@ namespace HelpersSQL
         {
             String caracter = ((andCondition) ? " and " : " or ");
             return string.Join(caracter, JoinFieldsWithEquals(whereFields, caracter));
+        }
+
+        /*
+         Método que se encarga de crear la sentencia de retorno de campos:
+         Ej: SqlServer: OUTPUT Inserted.id,Inserted.phone
+             Postgresql: RETURNING id,phone
+        */
+        private void ReturnField(DBMotor db, String[] fields, ref String postg,ref String server) {
+
+            if (fields == null) {
+                return;
+            }
+            if (db == DBMotor.SqlServer) {
+
+                server= string.Format("OUTPUT {0}", string.Join(",", fields.Select(i => string.Format("Inserted.{0}", i))));
+            }
+
+            if (db == DBMotor.Postgresql)
+            {
+                postg= string.Format("RETURNING {0}",string.Join(",", fields));
+            }
         }
     }
 }
