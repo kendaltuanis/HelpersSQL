@@ -35,10 +35,9 @@ namespace HelpersSQL
             return string.Format("DELETE FROM {0} " + ((whereFields != null) ? " WHERE {1}" : ";"), table, Where(whereFields, andCondition));
         }
 
-        public string SelectSql(string[] fields)
+        public string SelectSql(string[] fields, string[] whereFields = null, string[] camposAIgual = null)
         {
-            //return string.Format("SELECT {0} FROM {1}" + ((fields != null) ? " WHERE {2}" : ";"), JoinFields(fields), table, JoinFieldsWithEquals(fields));
-            return string.Format("SELECT {0} FROM {1}", JoinFields(fields), table);
+            return string.Format("SELECT {0} FROM {1}"+ ((whereFields != null) ? " WHERE {2}" : ";"), JoinFields(fields), table, JoinFieldsWithEquals(fields));
         }
 
         /*
